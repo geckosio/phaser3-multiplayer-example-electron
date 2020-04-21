@@ -1,0 +1,31 @@
+{
+  "name": "electron-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "npm-run-all --parallel electron www",
+    "electron": "electron electron/app.js",
+    "www": "webpack-dev-server --config webpack.client.js"
+  },
+  "keywords": [],
+  "author": "Yannick Deubel",
+  "license": "MIT",
+  "dependencies": {
+    "@geckos.io/client": "^1.4.0",
+    "@geckos.io/server": "^1.4.0",
+    "phaser": "3.22.0"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.1.1",
+    "electron": "^8.2.3",
+    "html-webpack-plugin": "^4.2.0",
+    "npm-run-all": "^4.1.5",
+    "ts-loader": "^7.0.1",
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

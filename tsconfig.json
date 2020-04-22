@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom"],
-    "sourceMap": true,
+    "module": "commonjs",
     "strict": true,
     "noImplicitAny": false,
+    "esModuleInterop": true,
+    "sourceMap": true,
     "strictPropertyInitialization": false,
-    "moduleResolution": "node",
-    "esModuleInterop": true
+    "lib": ["dom", "es5", "esnext", "ScriptHost"]
   }
 }

@@ -5,9 +5,10 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "npm-run-all --parallel electron www",
-    "electron": "electron electron/app.js",
-    "www": "webpack-dev-server --config webpack.client.js",
+    "start": "npm-run-all --parallel electron:* www",
+    "electron:app": "electron electron/app.js",
+    "electron:webpack": "webpack --watch --config electron/webpack.dev.js",
+    "www": "webpack-dev-server --config www/webpack.dev.js",
     "format": "prettier --write www/** electron/** --loglevel silent"
   },
   "keywords": [],
@@ -28,6 +29,7 @@
     "typescript": "^3.8.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "webpack-node-externals": "^1.7.2"
   }
 }

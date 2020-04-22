@@ -1,7 +1,7 @@
-const Phaser = require('phaser')
-const MainScene = require('./mainScene')
+import { Game } from 'phaser'
+import MainScene from './mainScene'
 
-new Phaser.Game({
+new Game({
   width: 800,
   height: 600,
   scale: {

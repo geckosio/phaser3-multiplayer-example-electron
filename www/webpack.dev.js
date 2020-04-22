@@ -7,12 +7,13 @@ module.exports = {
   entry: ['./www/src/app.ts'],
   output: {
     publicPath: '',
-    path: path.resolve(__dirname, './www/dist'),
+    path: path.resolve(__dirname, './dist'),
     filename: '[name].bundle.js',
     chunkFilename: '[name].chunk.js',
   },
   devServer: {
-    host: '0.0.0.0',
+    open: true,
+    // host: '0.0.0.0',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],

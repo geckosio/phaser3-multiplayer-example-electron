@@ -1,12 +1,13 @@
-const geckos = require('@geckos.io/server').default
+import geckos from '@geckos.io/server'
 
 const DEBUG = true
 
 class MainScene extends Phaser.Scene {
   players = new Map()
-  level = []
+  level: { key: string; x: number; y: number; scale: number }[] = []
   io
   controls
+  staticGroup
 
   constructor() {
     super('MainScene')
@@ -122,7 +123,7 @@ class MainScene extends Phaser.Scene {
     if (DEBUG) this.controls.update(delta)
 
     if (this.io && this.players.size >= 1) {
-      const update = []
+      const update: any = []
       this.players.forEach((player, id) => {
         const animation = player.dude.body.velocity.x > 0 ? 'right' : 'left'
         update.push({ id, x: player.dude.x, y: player.dude.y, animation })
@@ -132,4 +133,4 @@ class MainScene extends Phaser.Scene {
   }
 }
 
-module.exports = MainScene
+export default MainScene

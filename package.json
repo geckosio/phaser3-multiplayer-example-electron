@@ -7,7 +7,8 @@
   "scripts": {
     "start": "npm-run-all --parallel electron www",
     "electron": "electron electron/app.js",
-    "www": "webpack-dev-server --config webpack.client.js"
+    "www": "webpack-dev-server --config webpack.client.js",
+    "format": "prettier --write www/** electron/** --loglevel silent"
   },
   "keywords": [],
   "author": "Yannick Deubel",
@@ -22,6 +23,7 @@
     "electron": "^8.2.3",
     "html-webpack-plugin": "^4.2.0",
     "npm-run-all": "^4.1.5",
+    "prettier": "2.0.5",
     "ts-loader": "^7.0.1",
     "typescript": "^3.8.3",
     "webpack": "^4.43.0",

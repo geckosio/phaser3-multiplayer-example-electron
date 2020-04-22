@@ -9,7 +9,8 @@
     "electron:app": "electron electron/app.js",
     "electron:webpack": "webpack --watch --config electron/webpack.dev.js",
     "www": "webpack-dev-server --config www/webpack.dev.js",
-    "format": "prettier --write www/** electron/** --loglevel silent"
+    "format": "prettier --write www/** electron/** --loglevel silent",
+    "postinstall": "webpack --config electron/webpack.dev.js && webpack --config www/webpack.dev.js"
   },
   "keywords": [],
   "author": "Yannick Deubel",
